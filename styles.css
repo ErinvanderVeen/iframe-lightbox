@@ -1,0 +1,45 @@
+.lb_black
+{
+	display: block;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index: 1001;
+	-moz-opacity: 0.75;
+	opacity:.75;
+	filter: alpha(opacity=75);
+}
+.lb_content {
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	width: 80%;
+	height: 80%;
+	background-color: white;
+	z-index:1002;
+	overflow: visible;
+}
+
+.lb_content_frame
+{
+	width: 100%;
+	height: 100%;
+}
+
+.lb_close
+{
+	position: absolute;
+	top: -25px;
+	right: 0;
+	z-index: 1003;
+	opacity: 0.5;
+}
+
+.lb_close:hover
+{
+	opacity: 1;
+}

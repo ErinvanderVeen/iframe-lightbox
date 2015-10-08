@@ -1,0 +1,32 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<script type="text/javascript">
+	function showLightBox(url)
+	{
+		document.getElementById('lb_content').style.display = 'block';
+		document.getElementById('lb_content_frame').src = url;
+
+		var lb_black = document.createElement("div");
+		lb_black.id = 'lb_black';
+		lb_black.className = 'lb_black';
+		lb_black.onclick = hideLightBox;
+		document.body.appendChild(lb_black);
+	}
+	function hideLightBox()
+	{
+		document.body.removeChild(document.getElementById("lb_black"));
+		document.getElementById('lb_content').style.display = 'none';
+	}
+	</script>
+</head>
+<body>
+	<a href = "javascript:void(0)" onclick = "showLightBox('http://ru.nl')">Radboud Universiteit</a><br />
+	<a href = "javascript:void(0)" onclick = "showLightBox('http://tweakers.net')">Tweakers</a><br />
+	<a href = "javascript:void(0)" onclick = "showLightBox('http://osu.ppy.sh')">OSU!</a>
+	<div id = "lb_content" class = "lb_content">
+			<img src = "close.png" alt = "Close" class = "lb_close" onclick = "hideLightBox()">
+		<iframe class = "lb_content_frame" id = "lb_content_frame"></iframe>
+	</div>
+</body>
+</html>
