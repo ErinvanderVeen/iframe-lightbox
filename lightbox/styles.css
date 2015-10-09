@@ -28,15 +28,20 @@
 {
 	width: 100%;
 	height: 100%;
+	border: 0;
 }
 
 .lb_close
 {
 	position: absolute;
-	top: -25px;
-	right: 0;
+	top: -34px;
+	right: 0px;
 	z-index: 1003;
 	opacity: 0.5;
+	color: white;
+	font-family: Arial, Arial, sans-serif;
+	font-size: 32;
+	text-decoration: none;
 }
 
 .lb_close:hover
