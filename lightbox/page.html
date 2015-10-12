@@ -2,7 +2,6 @@
 <head>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<script type="text/javascript">
-
 	function showLightBox(url, height, width)
 	{
 		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -12,8 +11,20 @@
 		{
 			var lb_content = document.getElementById('lb_content');
 			document.getElementById('lb_content_frame').src = url;
-			lb_content.style.width = width;
-			lb_content.style.height = height;
+
+			if(arguments.length <= 2)
+			{
+				lb_content.style.width = screen.width / 2;
+				lb_content.style.height = screen.height / 2;
+				lb_content.style.left = screen.width / 4;
+			}
+			else
+			{
+				lb_content.style.width = width;
+				lb_content.style.height = height;
+				lb_content.style.left = (screen.width - width) / 2;
+			}
+			
 			lb_content.style.display = 'block';
 			
 			var lb_black = document.createElement("div");
@@ -32,7 +43,7 @@
 </head>
 <body>
 	<a href = "javascript:void(0)" onclick = "showLightBox('http://ru.nl', 1000, 500)">Radboud Universiteit</a><br />
-	<a href = "javascript:void(0)" onclick = "showLightBox('http://tweakers.net', 200, 200)">Tweakers</a><br />
+	<a href = "javascript:void(0)" onclick = "showLightBox('http://tweakers.net')">Tweakers</a><br />
 	<a href = "javascript:void(0)" onclick = "showLightBox('http://osu.ppy.sh', 500, 500)">OSU!</a>
 	<div id = "lb_content" class = "lb_content">
 		<a href = "javascript:void(0)" class = "lb_close" onclick = "hideLightBox()">
