@@ -14,15 +14,15 @@
 
 			if(arguments.length <= 2)
 			{
-				lb_content.style.width = screen.width / 2;
-				lb_content.style.height = screen.height / 2;
-				lb_content.style.left = screen.width / 4;
+				lb_content.style.width = document.body.clientWidth / 2;
+				lb_content.style.height = document.body.clientWeight / 2;
+				lb_content.style.left = document.body.clientWidth / 4;
 			}
 			else
 			{
 				lb_content.style.width = width;
 				lb_content.style.height = height;
-				lb_content.style.left = (screen.width - width) / 2;
+				lb_content.style.left = (document.body.clientWidth - width) / 2;
 			}
 			
 			lb_content.style.display = 'block';
