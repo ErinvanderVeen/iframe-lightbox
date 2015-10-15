@@ -46,9 +46,11 @@
 	<a href = "javascript:void(0)" onclick = "showLightBox('http://tweakers.net')">Tweakers</a><br />
 	<a href = "javascript:void(0)" onclick = "showLightBox('http://osu.ppy.sh', 500, 500)">OSU!</a>
 	<div id = "lb_content" class = "lb_content">
-		<a href = "javascript:void(0)" class = "lb_close" onclick = "hideLightBox()">
-			X
-		</a>
+		<div class="lb_close">
+			<a href = "javascript:void(0)" class = "lb_closeX" onclick = "hideLightBox()">
+				X
+			</a>
+		</div>
 		<iframe class = "lb_content_frame" id = "lb_content_frame"></iframe>
 	</div>
 </body>

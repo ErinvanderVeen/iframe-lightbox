@@ -21,29 +21,39 @@
 	z-index:1002;
 	overflow: visible;
 	top: 10%;
+	background: rgba(0, 0, 0, 0);
 }
 
 .lb_content_frame
 {
+	opacity: 1;
 	width: 100%;
 	height: 100%;
 	border: 0;
 }
 
+.lb_closeX
+{
+	color: rgb(180, 180, 180);
+	font-family: Arial, Arial, sans-serif;
+	font-size: 22;
+	text-decoration: none;
+}
+
 .lb_close
 {
+	line-height: 35px;
+	vertical-align: middle;
 	position: absolute;
-	top: -34px;
-	right: 0px;
-	z-index: 1003;
-	opacity: 0.5;
-	color: white;
-	font-family: Arial, Arial, sans-serif;
-	font-size: 32;
-	text-decoration: none;
+	right: 0;
+	top: -36px;
+	width: 35px;
+	height: 35px;
+	background: rgba(0, 0, 0, 0);
+	text-align: center;
 }
 
 .lb_close:hover
 {
-	opacity: 1;
+	background-color: rgb(200, 0, 0);
 }
